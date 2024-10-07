@@ -1,7 +1,33 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Contact.css'; // Create and import your CSS file
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Contact = () => {
+  useEffect(() => {
+    gsap.set(".contact-box, .contact-border", {
+      opacity: 0,
+      scale: 0
+    });
+
+    gsap.to(".contact-box, .contact-border", {
+      duration: 1.6,
+      opacity: 1,
+      scale: 1,
+      transformOrigin: "top right",
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".contact-us",
+        start: "top center",
+        end: "bottom",
+        markers: false
+      }
+    });
+
+  }, []);
+
   return (
     <section className="contact-section white-bg position-relative overflow-hidden">
       <h2 className="title text-center">Contact</h2>

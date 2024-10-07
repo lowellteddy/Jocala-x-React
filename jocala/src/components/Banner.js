@@ -42,7 +42,7 @@ const Banner = () => {
           <h1 id="headingBig">D</h1>
           <div className="banner-text">
             <h2 id="headingSmall">
-                     esign a Space <br />
+              esign a Space <br />
               You Love.
             </h2>
             <h3 id="headingText">

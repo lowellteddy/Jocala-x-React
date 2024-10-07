@@ -1,7 +1,33 @@
-import React from 'react';
+import React , {useEffect} from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Company.css'; // Create and import your CSS file
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Company = () => {
+  useEffect(() => {
+    gsap.set(".company-section .title, #compDescription", {
+      opacity: 0,
+      y: -200
+    });
+
+    gsap.to(".company-section .title, #compDescription", {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".company-section",
+        start: "top center",
+        end: "center",
+        markers: false
+      }
+    });
+
+    // Other animations...
+    
+  }, []);
   return (
     <section className="company-section white-bg position-relative overflow-hidden">
       <h2 className="title text-center">Company</h2>

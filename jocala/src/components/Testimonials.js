@@ -1,7 +1,34 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Testimonials.css'; // Create and import your CSS file
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Testimonials = () => {
+  useEffect(() => {
+    gsap.set(".testimonial-section .title", {
+      y: -200,
+      opacity: 0
+    });
+
+    gsap.to(".testimonial-section .title", {
+      duration: 1.6,
+      y: 0,
+      opacity: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".testimonial-section",
+        start: "top center",
+        end: "center",
+        markers: false
+      }
+    });
+
+    // Other animations...
+
+  }, []);
+
   return (
     <section className="testimonial-section black-bg theme-dark position-relative overflow-hidden">
       <h2 className="title text-center">Testimonials</h2>

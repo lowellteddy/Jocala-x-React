@@ -1,7 +1,33 @@
-import React from 'react';
+import React, {useEffect} from 'react'
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Designer.css'; // Create and import your CSS file
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Designer = () => {
+  useEffect(() => {
+    gsap.set(".designer-section .title, #designDescription", {
+      y: -200,
+      opacity: 0
+    });
+
+    gsap.to(".designer-section .title, #designDescription", {
+      duration: 1.6,
+      y: 0,
+      opacity: 1,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".designer-section",
+        start: "top center",
+        end: "center",
+        markers: false
+      }
+    });
+
+    // Other animations...
+
+  }, []);
   return (
     <section className="designer-section black-bg theme-dark position-relative">
       <h2 className="title text-center">Designers</h2>
