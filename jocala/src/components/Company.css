@@ -1,0 +1,23 @@
+/* Company */
+.company-section {
+    padding: 206px 0 0;
+  }
+  .compy-box {
+    padding: 0;
+  }
+  .compy-box::before {
+    left: 30px;
+    top: -30px;
+    position: absolute;
+    content: "";
+    border: 2px solid var(--primary);
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  .compy-box img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
+  }

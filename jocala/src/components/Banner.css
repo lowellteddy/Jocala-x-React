@@ -1,0 +1,82 @@
+/* Banner */
+.banner {
+    background-color: var(--black);
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+  }
+  .banner-img {
+    position: relative;
+    overflow: hidden;
+  }
+  .banner-img::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(0 0 0 / 60%);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .banner-img img {
+    height: 50%;
+    width: 50%;
+    object-fit: cover;
+    object-position: left;
+    margin-left: 50%;
+    border-radius: 10%;
+  }
+  .banner-box {
+    padding: 60px;
+    position: relative;
+    z-index: 1;
+  }
+  .banner-box h1 {
+    position: absolute;
+    top: 11%;
+    left: 0;
+    font-size: 339px;
+    line-height: 370px;
+    font-weight: 400;
+    text-transform: uppercase;
+    background-image: url(https://www.yudiz.com/codepen/interior-design/mask-img.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    opacity: 0.6;
+    color: var(--white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    font-family: 'Times New Roman', Times, serif;
+    z-index: -1;
+  }
+  .banner-text {
+    margin: 100px 0 0;
+    padding: 135px 0 0 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    max-width: 80%;
+    overflow: hidden;
+  }
+  .banner-text h2 {
+    margin: 0 0 8px;
+    font-size: 104px;
+    line-height: 1.1;
+    font-weight: 400;
+    font-style: normal;
+    color: var(--white);
+    position: relative;
+    user-select: none;
+  }
+  .banner-text h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgb(255 255 255 / 72%);
+    position: relative;
+  }
+  
