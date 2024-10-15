@@ -62,17 +62,34 @@
     overflow: hidden;
     
   }
-  .banner-text h2 {
-    margin: 0 0 8px;
-    font-size: 104px;
-    line-height: 1.1;
-    font-weight: 400;
-    font-style: normal;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    color: var(--white);
-    position: relative;
-    user-select: none;
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-100%); /* Start from the left */
+      opacity: 0; /* Start transparent */
+    }
+    100% {
+      transform: translateX(0); /* End at its original position */
+      opacity: 1; /* End fully opaque */
+    }
   }
+  
+  /* Existing styles for h2 */
+  .banner-text h2 {
+      margin: 0 0 8px;
+      font-size: 104px;
+      line-height: 1.1;
+      font-weight: 400;
+      font-style: normal;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: var(--white);
+      position: relative;
+      user-select: none;
+      animation: slideIn 2s ease-out forwards; /* Slide-in animation */
+      
+  }
+  
+  
+  
   .banner-text h3 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
@@ -81,6 +98,12 @@
     line-height: 28px;
     color: rgb(255 255 255 / 72%);
     position: relative;
+    animation: slideIn 2s ease-out forwards; /* Slide-in animation */
+      
+      
+
+      
+
   }
 
 
