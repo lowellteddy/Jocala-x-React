@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Designer.css'; // Create and import your CSS file
@@ -28,6 +28,13 @@ const Designer = () => {
     // Other animations...
 
   }, []);
+
+  const handleReadMoreClick = (event) => {
+    event.preventDefault();
+    // Add logic for "read more" action here, e.g., navigating to another section or displaying more content
+    console.log('Read more clicked');
+  };
+
   return (
     <section className="designer-section black-bg theme-dark position-relative">
       <h2 className="title text-center">Designers</h2>
@@ -73,7 +80,7 @@ const Designer = () => {
                   of Professional Studies in Sustainable Interior Environments.
                 </p>
               </div>
-              <a href="javascript:void(0)" className="common-btn">
+              <a href="#" onClick={handleReadMoreClick} className="common-btn">
                 read more
                 <img
                   src="https://www.yudiz.com/codepen/interior-design/arrow-right.svg"

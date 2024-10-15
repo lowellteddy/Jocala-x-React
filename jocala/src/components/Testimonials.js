@@ -1,26 +1,26 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Testimonials.css'; // Create and import your CSS file
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Testimonials = () => {
   useEffect(() => {
-    gsap.set(".testimonial-section .title", {
+    gsap.set('.testimonial-section .title', {
       y: -200,
       opacity: 0
     });
 
-    gsap.to(".testimonial-section .title", {
+    gsap.to('.testimonial-section .title', {
       duration: 1.6,
       y: 0,
       opacity: 1,
-      ease: "power2.inOut",
+      ease: 'power2.inOut',
       scrollTrigger: {
-        trigger: ".testimonial-section",
-        start: "top center",
-        end: "center",
+        trigger: '.testimonial-section',
+        start: 'top center',
+        end: 'center',
         markers: false
       }
     });
@@ -29,44 +29,63 @@ const Testimonials = () => {
 
   }, []);
 
+  const handleReadMoreClick = (event) => {
+    event.preventDefault();
+    // Add logic for "read more" action here, e.g., navigating to another section or displaying more content
+    console.log('Read more clicked');
+  };
+
   return (
-    <section className="testimonial-section black-bg theme-dark position-relative overflow-hidden">
+    <section className="testimonial-section white-bg position-relative overflow-hidden">
       <h2 className="title text-center">Testimonials</h2>
       <div className="container">
-        <div className="row gx-4 align-items-stretch">
-          <div className="col-md-6 align-self-center order-md-last">
-            <div className="testimonial-description py-lg-5">
-              <div className="pb-3 paragraph">
-                <p>
-                  At SID, we often say that we “grow our own” — meaning that our
-                  outstanding graduates and talented students become the next
-                  generation of SID instructors.
-                </p>
-                <p>
-                  Our students consistently praise SID's practical,
-                  project-based curriculum, which prepares them to excel in
-                  professional practice. Our exceptional faculty members
-                  provide unparalleled mentorship and guidance, and our
-                  supportive community fosters lifelong connections.
-                </p>
-              </div>
-              <a href="javascript:void(0)" className="common-btn">
-                read more
-                <img
-                  src="https://www.yudiz.com/codepen/interior-design/arrow-right.svg"
-                  className="img-fluid"
-                  alt="Arrow"
-                />
+        <div className="row g-0 left-row">
+          <div className="col-md-6">
+            <div className="content border-end-0">
+              <h3>Bertie Norton</h3>
+              <p>
+                "Aenean pulvinar dui ornare, feugiat lorem non, ultrices justo.
+                Quam elit ultrices urna, eget eleifend arcu risus id metus.
+                Maecenas ex enim, mattis eu velit vitae, blandit mattis sapien.
+                Sed aliquam leo et semper vestibulum."
+              </p>
+              <a href="#" className="read-more" onClick={handleReadMoreClick}>
+                Read More
               </a>
             </div>
           </div>
           <div className="col-md-6">
-            <div className="testimonial-box mt-4 my-md-0 position-relative">
+            <div className="img-box">
               <img
-                src="https://www.yudiz.com/codepen/interior-design/testimonial-bg.png"
+                src="https://www.yudiz.com/codepen/interior-design/person-01.jpg"
                 className="img-fluid"
-                alt="Testimonial"
+                alt="person"
               />
+            </div>
+          </div>
+        </div>
+        <div className="row g-0 reverse-row right-row">
+          <div className="col-md-6">
+            <div className="img-box">
+              <img
+                src="https://www.yudiz.com/codepen/interior-design/person-02.jpg"
+                className="img-fluid"
+                alt="person"
+              />
+            </div>
+          </div>
+          <div className="col-md-6">
+            <div className="content border-start-0">
+              <h3>Mike Perry</h3>
+              <p>
+                "Aenean pulvinar dui ornare, feugiat lorem non, ultrices justo.
+                Quam elit ultrices urna, eget eleifend arcu risus id metus.
+                Maecenas ex enim, mattis eu velit vitae, blandit mattis sapien.
+                Sed aliquam leo et semper vestibulum."
+              </p>
+              <a href="#" className="read-more" onClick={handleReadMoreClick}>
+                Read More
+              </a>
             </div>
           </div>
         </div>

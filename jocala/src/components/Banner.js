@@ -1,15 +1,12 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Banner.css'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
-
 const Banner = () => {
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
     // Banner Big Image
     gsap.to("#bannerBigimg", {
       duration: 2,
@@ -31,10 +28,8 @@ const Banner = () => {
       repeat: 1,
       repeatRefresh: true
     });
-
-    
-
   }, []);
+
   return (
     <section className="banner overflow-hidden">
       <div className="container">
@@ -64,7 +59,6 @@ const Banner = () => {
         </div>
       </div>
     </section>
-    
   );
 };
 

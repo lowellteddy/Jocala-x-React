@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import './Contact.css'; // Create and import your CSS file
@@ -25,8 +25,13 @@ const Contact = () => {
         markers: false
       }
     });
-
   }, []);
+
+  const handleReadMoreClick = (event) => {
+    event.preventDefault();
+    // Add logic for "read more" action here, e.g., navigating to another section or displaying more content
+    console.log('Read more clicked');
+  };
 
   return (
     <section className="contact-section white-bg position-relative overflow-hidden">
@@ -52,7 +57,7 @@ const Contact = () => {
                   socially and environmentally conscientious way.
                 </p>
               </div>
-              <a href="javascript:void(0)" className="common-btn">
+              <a href="#" onClick={handleReadMoreClick} className="common-btn">
                 read more
                 <img
                   src="https://www.yudiz.com/codepen/interior-design/arrow-right.svg"

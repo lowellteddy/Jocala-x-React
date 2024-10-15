@@ -1,26 +1,26 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Projects.css'; // Create and import your CSS file
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   useEffect(() => {
-    gsap.set(".projects-section .title", {
+    gsap.set('.projects-section .title', {
       y: -200,
       opacity: 0
     });
 
-    gsap.to(".projects-section .title", {
+    gsap.to('.projects-section .title', {
       duration: 1.6,
       y: 0,
       opacity: 1,
-      ease: "power2.inOut",
+      ease: 'power2.inOut',
       scrollTrigger: {
-        trigger: ".projects-section",
-        start: "top center",
-        end: "center",
+        trigger: '.projects-section',
+        start: 'top center',
+        end: 'center',
         markers: false
       }
     });
@@ -28,6 +28,13 @@ const Projects = () => {
     // Other animations...
 
   }, []);
+
+  const handleReadMoreClick = (event) => {
+    event.preventDefault();
+    // Add logic for "read more" action here, e.g., navigating to another section or displaying more content
+    console.log('Read more clicked');
+  };
+
   return (
     <section className="projects-section white-bg position-relative overflow-hidden">
       <h2 className="title text-center">Projects</h2>
@@ -80,7 +87,8 @@ const Projects = () => {
                         looking forward to the next 100 years.
                       </p>
                       <a
-                        href="javascript:void(0)"
+                        href="#"
+                        onClick={handleReadMoreClick}
                         className="common-btn ms-auto d-table"
                       >
                         <img
@@ -105,7 +113,7 @@ const Projects = () => {
                   historians, and authorities in related fields.
                 </p>
               </div>
-              <a href="javascript:void(0)" className="common-btn">
+              <a href="#" onClick={handleReadMoreClick} className="common-btn">
                 read more
                 <img
                   src="https://www.yudiz.com/codepen/interior-design/arrow-right.svg"
