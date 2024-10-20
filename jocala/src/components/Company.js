@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import './Company.css'; // Create and import your CSS file
+import './Company.css'; // Ensure this CSS file exists
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Company = () => {
   useEffect(() => {
+    // Animate the title and description text
     gsap.set(".company-section .title, #compDescription", {
       opacity: 0,
       y: -200
@@ -25,7 +26,26 @@ const Company = () => {
       }
     });
 
-    // Other animations...
+    // Animate the company image
+    gsap.set(".compy-box img", {
+      opacity: 0,
+      x: 200,
+      y: -200
+    });
+
+    gsap.to(".compy-box img", {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      duration: 1.5,
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".compy-box",
+        start: "top center",
+        end: "center",
+        markers: false
+      }
+    });
   }, []);
 
   const handleReadMoreClick = (event) => {

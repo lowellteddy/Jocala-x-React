@@ -15,9 +15,10 @@
     width: 100%;
     z-index: 1;
   }
-  .compy-box img {
+.compy-box img {
     height: 100%;
     width: 50%;
     object-fit: cover;
     object-position: left;
-  }
+    
+}

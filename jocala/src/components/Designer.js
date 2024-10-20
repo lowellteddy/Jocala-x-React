@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import './Designer.css'; // Create and import your CSS file
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import './Designer.css'; // Ensure this CSS file exists
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Designer = () => {
   useEffect(() => {
+    // Animate text elements
     gsap.set(".designer-section .title, #designDescription", {
       y: -200,
       opacity: 0
@@ -25,13 +26,31 @@ const Designer = () => {
       }
     });
 
-    // Other animations...
+    // Animate images with spin-in effect
+    gsap.set(".designer-box img", {
+      y: 200,
+      opacity: 0,
+      rotation: 360 // Initial rotation for spin-in effect
+    });
+
+    gsap.to(".designer-box img", {
+      duration: 0.5,
+      y: 0,
+      opacity: 1,
+      rotation: 0, // End rotation
+      ease: "power2.inOut",
+      scrollTrigger: {
+        trigger: ".designer-box",
+        start: "top center",
+        end: "center",
+        markers: false
+      }
+    });
 
   }, []);
 
   const handleReadMoreClick = (event) => {
     event.preventDefault();
-    // Add logic for "read more" action here, e.g., navigating to another section or displaying more content
     console.log('Read more clicked');
   };
 

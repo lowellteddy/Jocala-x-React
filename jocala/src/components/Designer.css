@@ -45,4 +45,10 @@
     left: 4%;
     z-index: 2;
   }
+
+#designDescription {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1); /* Light white background with transparency */
+  border-radius: 8px;
+}
   

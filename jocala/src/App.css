@@ -49,13 +49,14 @@ img {
   background-color: var(--black);
 }
 h2.title {
-  font-size: 272px;
+  font-size: 270px;
   font-style: normal;
   font-weight: 400;
   line-height: 1;
   color: rgba(0, 0, 0, 0.06);
   text-transform: uppercase;
   position: absolute;
+  margin-top: -230px;
 
   left: 0;
   width: 100%;
@@ -420,10 +421,10 @@ p {
     margin: auto;
   }
   .designer-box .team-member {
-    width: 152px;
+    width: 15px;
   }
   .designer-box .team1 {
-    left: 10%;
+    left: 20%;
   }
 
   /* projects */

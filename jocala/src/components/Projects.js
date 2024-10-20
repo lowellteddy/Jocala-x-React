@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './Projects.css'; // Create and import your CSS file
+import './Projects.css'; // Ensure this CSS file exists
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   useEffect(() => {
+    // Animate title
     gsap.set('.projects-section .title', {
       y: -200,
       opacity: 0
@@ -21,17 +22,77 @@ const Projects = () => {
         trigger: '.projects-section',
         start: 'top center',
         end: 'center',
+        once: true,
         markers: false
       }
     });
 
-    // Other animations...
+    // Animate left images
+    gsap.set('.pbox-left img', {
+      x: -100,
+      opacity: 0
+    });
 
+    gsap.to('.pbox-left img', {
+      duration: 1.5,
+      x: 0,
+      opacity: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.projects-section',
+        start: 'top center',
+        end: 'bottom center',
+        once: true,
+        markers: false,
+        scrub: 1
+      }
+    });
+
+    // Animate right images
+    gsap.set('.pbox-right img', {
+      x: 100,
+      opacity: 0
+    });
+
+    gsap.to('.pbox-right img', {
+      duration: 1.5,
+      x: 0,
+      opacity: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.projects-section',
+        start: 'top center',
+        end: 'bottom center',
+        once: true,
+        markers: false,
+        scrub: 1
+      }
+    });
+
+    // Animate central image with text
+    gsap.set('.project-content img', {
+      y: 100,
+      opacity: 0
+    });
+
+    gsap.to('.project-content img', {
+      duration: 1.5,
+      y: 0,
+      opacity: 1,
+      ease: 'power2.out',
+      scrollTrigger: {
+        trigger: '.projects-section',
+        start: 'top center',
+        end: 'bottom center',
+        once: true,
+        markers: false,
+        scrub: 1
+      }
+    });
   }, []);
 
   const handleReadMoreClick = (event) => {
     event.preventDefault();
-    // Add logic for "read more" action here, e.g., navigating to another section or displaying more content
     console.log('Read more clicked');
   };
 
@@ -42,8 +103,8 @@ const Projects = () => {
         <div className="row align-items-stretch overflow-hidden gy-1 gy-md-0 gx-1 gx-md-3 gx-lg-4">
           <div className="col-md-9">
             <div className="row g-1 g-md-3 g-lg-4 overflow-hidden">
-              <div className="col-8">
-                <div className="project-box pbox-left">
+              <div className="col-8 pbox-left">
+                <div className="project-box">
                   <img
                     src="https://www.yudiz.com/codepen/interior-design/project-01.jpg"
                     className="img-fluid"
@@ -51,8 +112,8 @@ const Projects = () => {
                   />
                 </div>
               </div>
-              <div className="col-4">
-                <div className="project-box pbox-right">
+              <div className="col-4 pbox-right">
+                <div className="project-box">
                   <img
                     src="https://www.yudiz.com/codepen/interior-design/project-02.jpg"
                     className="img-fluid"
@@ -60,8 +121,8 @@ const Projects = () => {
                   />
                 </div>
               </div>
-              <div className="col-4">
-                <div className="project-box pbox-left">
+              <div className="col-4 pbox-left">
+                <div className="project-box">
                   <img
                     src="https://www.yudiz.com/codepen/interior-design/project-03.jpg"
                     className="img-fluid"
@@ -79,7 +140,7 @@ const Projects = () => {
                   <div className="row align-items-center h-100">
                     <div className="col-10 col-md-8 col-xxl-7 ms-auto">
                       <p>
-                        We celebrated our 100th anniversary with series of
+                        We celebrated our 100th anniversary with a series of
                         events and initiatives that paid tribute to our rich
                         history, our role in the development of the field, and
                         the great opportunities for the future. But we're only
