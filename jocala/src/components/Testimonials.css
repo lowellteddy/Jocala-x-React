@@ -29,16 +29,19 @@
     width: 340px;
     aspect-ratio: 1 / 1;
     overflow: hidden;
+    left:100%;
   }
   .testimonial-section .img-box img {
     width: 100%;
-    height: 100%;
+    height: 130%;
     object-fit: cover;
     object-position: center;
+    
   }
   .testimonial-section .reverse-row {
     align-items: flex-start;
   }
   .testimonial-section .reverse-row .img-box {
-    margin-left: auto;
+    margin-left: 83.2%;
+    
   }
