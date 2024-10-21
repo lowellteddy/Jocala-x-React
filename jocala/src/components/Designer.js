@@ -34,7 +34,7 @@ const Designer = () => {
     });
 
     gsap.to(".designer-box img", {
-      duration: 0.5,
+      duration: 2,
       y: 0,
       opacity: 1,
       rotation: 0, // End rotation
