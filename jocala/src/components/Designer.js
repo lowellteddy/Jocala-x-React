@@ -63,21 +63,21 @@ const Designer = () => {
             <div className="designer-box position-relative">
               <div className="team-member team1">
                 <img
-                  src="https://www.yudiz.com/codepen/interior-design/team-1.jpg"
+                  src="../Assets/Images/WhatsApp Image 2024-10-21 at 22.05.32.jpeg"
                   className="img-fluid team1-img"
                   alt="Team Member 1"
                 />
               </div>
               <div className="team-member team2">
                 <img
-                  src="https://www.yudiz.com/codepen/interior-design/team-2.jpg"
+                  src="../Assets/WhatsApp Image 2024-10-21 at 22.11.40.jpeg"
                   className="img-fluid team2-img"
                   alt="Team Member 2"
                 />
               </div>
               <div className="team-member team3">
                 <img
-                  src="https://www.yudiz.com/codepen/interior-design/team-3.jpg"
+                  src="../Assets/Images/WhatsApp Image 2024-10-21 at 22.58.55.jpeg"
                   className="img-fluid team3-img"
                   alt="Team Member 3"
                 />

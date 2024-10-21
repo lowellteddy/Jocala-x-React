@@ -57,7 +57,7 @@ const Testimonials = () => {
           <div className="col-md-6">
             <div className="img-box">
               <img
-                src="https://www.yudiz.com/codepen/interior-design/person-01.jpg"
+                src="../Assets/Images/WhatsApp Image 2024-10-21 at 22.02.37.jpeg"
                 className="img-fluid"
                 alt="person"
               />
@@ -68,7 +68,7 @@ const Testimonials = () => {
           <div className="col-md-6">
             <div className="img-box">
               <img
-                src="https://www.yudiz.com/codepen/interior-design/person-02.jpg"
+                src="../Assets/Images/WhatsApp Image 2024-10-21 at 22.23.02.jpeg"
                 className="img-fluid"
                 alt="person"
               />

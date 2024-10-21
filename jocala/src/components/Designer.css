@@ -5,8 +5,9 @@
 
 .designer-box {
   width: 100%;
-  height: 605px;
+  height: 700px;
   z-index: 1;
+  
 }
 
 .box-border {
@@ -15,7 +16,7 @@
   top: 0;
   left: 0;
   border: 2px solid var(--white);
-  height: 88%;
+  height: 100%;
   width: 90%;
   z-index: -1;
 }
@@ -24,10 +25,12 @@
   aspect-ratio: 1 / 1;
   width: 315px;
   position: relative;
+  height: 500px;
+
 }
 
 .designer-box .team-member img {
-  height: 100%;
+  
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -35,14 +38,17 @@
 
 /* Specific styles for each team member */
 .team1-img {
+  filter: grayscale(100%);
   border: 3px solid var(--accent-color);
   border-radius: 10px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: filter 0.3s ease, border 0.3s ease;
 }
 
 .team1-img:hover {
   transform: scale(1.05);
+  border: 3px solid var(--secondary-color);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: grayscale(0%);
 }
 
 .team2-img {
@@ -61,15 +67,17 @@
 }
 
 .team3-img {
+  filter: grayscale(100%);
   border: 3px solid var(--primary-color);
   border-radius: 10px;
   opacity: 0.9;
-  transition: opacity 0.3s ease, box-shadow 0.3s ease;
+  transition: filter 0.3s ease, border 0.3s ease;
 }
 
 .team3-img:hover {
-  opacity: 1;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  filter: grayscale(0%);
+  border: 3px solid var(--secondary-color);
+  
 }
 
 .designer-box .team1 {
@@ -79,13 +87,13 @@
 }
 
 .designer-box .team2 {
-  left: 55%;
-  top:-25%;
+  left: 75%;
+  top:-45%;
 }
 
 .designer-box .team3 {
-  bottom: 45%;
-  left: 25%;
+  bottom: 90%;
+  left: 35%;
   z-index: 2;
   margin-top: -100px;
 }
