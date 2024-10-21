@@ -38,7 +38,7 @@ const Contact = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-5">
-            <h4>School of Interior Design</h4>
+            <h4>Jocala Interiors</h4>
             <ul className="nav flex-column">
               <li className="nav-item">
                 <img
@@ -56,8 +56,8 @@ const Contact = () => {
                   className="img-fluid"
                   alt="Email"
                 />
-                <a className="nav-link" href="mailto:info@design.com">
-                  info@design.com
+                <a className="nav-link" href="mailto:jocalaproperties@gmail.com">
+                  jocalaproperties@gmail.com
                 </a>
               </li>
               <li className="nav-item">
@@ -66,7 +66,7 @@ const Contact = () => {
                   className="img-fluid"
                   alt="Call"
                 />
-                <a className="nav-link" href="tel:2150021500">215-002-1500</a>
+                <a className="nav-link" href="tel:0790626175">0790626175</a>
               </li>
             </ul>
           </div>

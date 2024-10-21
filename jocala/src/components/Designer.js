@@ -64,22 +64,22 @@ const Designer = () => {
               <div className="team-member team1">
                 <img
                   src="https://www.yudiz.com/codepen/interior-design/team-1.jpg"
-                  className="img-fluid"
-                  alt="Team Member"
+                  className="img-fluid team1-img"
+                  alt="Team Member 1"
                 />
               </div>
               <div className="team-member team2">
                 <img
                   src="https://www.yudiz.com/codepen/interior-design/team-2.jpg"
-                  className="img-fluid"
-                  alt="Team Member"
+                  className="img-fluid team2-img"
+                  alt="Team Member 2"
                 />
               </div>
               <div className="team-member team3">
                 <img
                   src="https://www.yudiz.com/codepen/interior-design/team-3.jpg"
-                  className="img-fluid"
-                  alt="Team Member"
+                  className="img-fluid team3-img"
+                  alt="Team Member 3"
                 />
               </div>
               <div className="box-border"></div>

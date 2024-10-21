@@ -42,7 +42,7 @@ const Testimonials = () => {
         <div className="row g-0 left-row">
           <div className="col-md-6">
             <div className="content border-end-0">
-              <h3>Bertie Norton</h3>
+              <h3>Praise Lavender</h3>
               <p>
                 "Aenean pulvinar dui ornare, feugiat lorem non, ultrices justo.
                 Quam elit ultrices urna, eget eleifend arcu risus id metus.
@@ -76,7 +76,7 @@ const Testimonials = () => {
           </div>
           <div className="col-md-6">
             <div className="content border-start-0">
-              <h3>Mike Perry</h3>
+              <h3>Gideon Ombewa</h3>
               <p>
                 "Aenean pulvinar dui ornare, feugiat lorem non, ultrices justo.
                 Quam elit ultrices urna, eget eleifend arcu risus id metus.
