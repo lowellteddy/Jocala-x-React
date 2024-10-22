@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Projects.css'; // Ensure this CSS file exists
@@ -106,9 +107,8 @@ const Projects = () => {
                     just beginning. SID's future is exciting, and we're
                     looking forward to the next 100 years.
                   </p>
-                  <a
-                    href="#"
-                    onClick={handleReadMoreClick}
+                  <Link // Use Link instead of a regular anchor tag
+                    to="/services" // Set the path to the Services component
                     className="common-btn ms-auto d-table"
                   >
                     <img
@@ -116,7 +116,7 @@ const Projects = () => {
                       className="img-fluid"
                       alt="Arrow"
                     />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -133,14 +133,14 @@ const Projects = () => {
                   historians, and authorities in related fields.
                 </p>
               </div>
-              <a href="#" onClick={handleReadMoreClick} className="common-btn">
+              <Link to="/services" className="common-btn"> {/* Use Link here as well */}
                 read more
                 <img
                   src="https://www.yudiz.com/codepen/interior-design/arrow-right.svg"
                   className="img-fluid"
                   alt="Arrow"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

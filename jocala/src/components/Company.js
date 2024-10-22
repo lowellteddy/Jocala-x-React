@@ -37,7 +37,8 @@ const Company = () => {
       opacity: 1,
       x: 0,
       y: 0,
-      duration: 1.5,
+      duration: 0.3,
+      
       ease: "power2.inOut",
       scrollTrigger: {
         trigger: ".compy-box",
