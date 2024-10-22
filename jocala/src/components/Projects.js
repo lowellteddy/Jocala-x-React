@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { Link } from 'react-router-dom'; // Import Link from react-router-dom
+import React from 'react';
+import { Link, useNavigate } from 'react-router-dom'; // Import Link and useNavigate from react-router-dom
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import './Projects.css'; // Ensure this CSS file exists
@@ -7,7 +7,14 @@ import './Projects.css'; // Ensure this CSS file exists
 gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
-  useEffect(() => {
+  const navigate = useNavigate(); // Initialize useNavigate
+
+  // Function to handle navigation on "Read More" click
+  const handleReadMoreClick = () => {
+    navigate('/services'); // Programmatically navigate to the Services page
+  };
+
+  React.useEffect(() => {
     // Animate title
     gsap.set('.projects-section .title', {
       y: -200,
@@ -52,11 +59,6 @@ const Projects = () => {
       });
     });
   }, []);
-
-  const handleReadMoreClick = (event) => {
-    event.preventDefault();
-    console.log('Read more clicked');
-  };
 
   return (
     <section className="projects-section white-bg position-relative overflow-hidden">
@@ -107,8 +109,8 @@ const Projects = () => {
                     just beginning. SID's future is exciting, and we're
                     looking forward to the next 100 years.
                   </p>
-                  <Link // Use Link instead of a regular anchor tag
-                    to="/services" // Set the path to the Services component
+                  <button // Change Link to button for programmatic navigation
+                    onClick={handleReadMoreClick}
                     className="common-btn ms-auto d-table"
                   >
                     <img
@@ -116,7 +118,7 @@ const Projects = () => {
                       className="img-fluid"
                       alt="Arrow"
                     />
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -133,14 +135,17 @@ const Projects = () => {
                   historians, and authorities in related fields.
                 </p>
               </div>
-              <Link to="/services" className="common-btn"> {/* Use Link here as well */}
+              <button 
+                onClick={handleReadMoreClick}
+                className="common-btn"
+              >
                 read more
                 <img
                   src="https://www.yudiz.com/codepen/interior-design/arrow-right.svg"
                   className="img-fluid"
                   alt="Arrow"
                 />
-              </Link>
+              </button>
             </div>
           </div>
         </div>

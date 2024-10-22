@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import './Services.css'; // Ensure this CSS file exists
+import './Services.css'; 
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -27,7 +27,7 @@ const Services = () => {
       }
     });
 
-    // Animate images
+    
     const imageClasses = [
       '.img-livingroom-1', '.img-livingroom-2', '.img-livingroom-3', '.img-livingroom-4',
       '.img-kitchen-1', '.img-kitchen-2', '.img-kitchen-3', '.img-kitchen-4',
@@ -58,16 +58,13 @@ const Services = () => {
     });
   }, []);
 
-  const handleReadMoreClick = (event) => {
-    event.preventDefault();
-    console.log('Read more clicked');
-  };
 
   return (
     <section className="services-section white-bg position-relative overflow-hidden">
       <h2 className="title text-center">Services</h2>
       <div className="container">
         {/* Living Room Section */}
+        <h2 className="title text-center">Services</h2>
         <div className="grid-container">
           <div className="grid-item img-livingroom-1">
             <div className="service-box">
@@ -107,6 +104,7 @@ const Services = () => {
           </div>
         </div>
         <p className="description">
+          <h1>LIVING ROOM</h1>
         The living room is the heart of the home, a space where family and friends gather to relax and connect.
         Our interior design team meticulously curates each living room with a perfect blend of comfort and elegance. 
         We focus on creating an inviting ambiance with plush seating, warm lighting, and tasteful decor.
@@ -154,6 +152,8 @@ const Services = () => {
           </div>
         </div>
         <p className="description">
+          <h1>KITCHEN</h1>
+        
         The kitchen is the hub of culinary creativity and social interaction. 
         Our designs transform this essential space into a stylish and efficient masterpiece.
         We prioritize functionality without compromising on aesthetics, integrating state-of-the-art appliances seamlessly with elegant cabinetry and countertops. 
@@ -203,6 +203,8 @@ const Services = () => {
           </div>
         </div>
         <p className="description">
+          <h1>BEDROOM</h1>
+          
         The bedroom is a personal retreat, a space for rest and rejuvenation. 
         Our design approach focuses on creating a serene and comfortable environment that promotes relaxation and peace. 
         We carefully select soothing color palettes, luxurious fabrics, and bespoke furnishings to craft a bedroom that feels both intimate and opulent. 
@@ -251,6 +253,8 @@ const Services = () => {
           </div>
         </div>
         <p className="description">
+          <h1>OFFICE</h1>
+          
         The office is a space where productivity and creativity thrive. 
         Our interior design team creates offices that are both functional and inspiring. 
         We emphasize ergonomic furniture, ample natural light, and a layout that enhances focus and efficiency. 

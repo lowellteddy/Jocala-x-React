@@ -113,4 +113,31 @@
   .img-office-4 img {
     object-position: center;
   }
+  .description {
+    background-color: black; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+    margin: 20px; 
+    padding: 15px; 
+    font-size: 1.2rem; 
+    line-height: 1.6;
+    color: white;
+     
+}
+.services-section .title.text-center2 {
+  font-size: 250px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.06);
+  text-transform: uppercase;
+  position: absolute;
+  margin-top: 325px;
+  left: 2%;
+  width: 100%;
+  user-select: none;
+  pointer-events: none;
+}
+
+
   
